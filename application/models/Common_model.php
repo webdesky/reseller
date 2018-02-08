@@ -31,6 +31,13 @@ class Common_model extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+    // function getDatabyid($table,$colname,$id){
+    //  $this->db->select('*');
+    //  $this->db->from($table);
+    //  $this->db->where($colname,$id);
+    //  $query = $this->db->get();
+    //  return $query->result_array();
+    // }  
     function get_matching_record($table,$val,$field_name)
     {
         $this->db->select('*');
@@ -603,5 +610,67 @@ class Common_model extends CI_Model
         $this->db->delete('invoice_other_details', array('invoice_id' => $id));      
         $this->db->delete('product_details', array('invoice_no' => $invoice_no)); 
     }
+    /*Pushpendra code*/
 
+    function getRecordCount($table, $where_condition)
+    {
+        $this->db->where($where_condition);
+        $query = $this->db->get($table);
+        return $query->num_rows();
+    }
+
+    function addRecords($table,$post_data)
+    {
+        $this->db->insert($table,$post_data); 
+        return $this->db->insert_id(); 
+    }
+
+    function getSingleRecordById($table,$conditions)
+    {
+       $query = $this->db->get_where($table,$conditions);
+       return $query->row_array();
+    }
+    function updateRecords($table, $post_data, $where_condition)
+    {
+        $this->db->where($where_condition);
+        $this->db->update($table, $post_data);
+        $this->db->last_query();
+        return true; 
+    }
+    function getAllRecordsById($table,$conditions)
+
+    {
+       //$this->db->order_by('id', 'desc');
+       $query = $this->db->get_where($table,$conditions);
+       return $query->result_array();
+    }
+
+    function likesearch($tab,$whr){
+         $this->db->from($tab);
+         $this->db->where($whr);
+         $query = $this->db->get();
+         $res = $query->result_array();
+         return $res;
+    }
+    function likesearch1($tab,$whr1){
+         $this->db->from($tab);
+         $this->db->where($whr1);
+         $query = $this->db->get();
+         $res = $query->result_array();
+         return $res;
+    }
+    function likesearch3($tab,$whr3){
+         $this->db->from($tab);
+         $this->db->where($whr3);
+         $query = $this->db->get();
+         $res = $query->result_array();
+         return $res;
+    }
+
+    public function getWhereData($tab,$whr)
+    {
+        $this->db->order_by('id', 'desc');
+        $result = $this->db->get_where($tab,$whr)->result_array();
+        return $result;
+    }
 }

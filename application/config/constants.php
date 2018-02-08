@@ -83,3 +83,67 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+/* Define error codes */
+
+define('SITE_NAME', 'Reseller');
+
+define('META_TITLE', 'Welcome');
+
+define('ADMIN_EMAIL', 'admin@gmail.com');
+
+define('DEF_MAIL', 'pushpendrajha88@gmail.com');
+
+define('IMG_URL',"http://webdesky.com/reseller/uploads/");
+
+define('REGARD_MESSAGE', '<br/><br/><br/>Regards,<br/>Site Admin');
+
+define('SUCCESS', 100);
+
+define('ERROR', 101);
+
+define('VERIFICATIONERROR', 103);
+
+define('MISSING_PARAM', 102);
+
+define('LIKE_POSTING', 1);
+
+define('DISLIKE_POSTING', 2);
+
+
+//defined('SENDER_EMAIL')      OR define('SENDER_EMAIL', "nirbhay@espsofttech.com");
+
+//defined('DEF_MAIL')      OR define('DEF_MAIL', "nirbhay@espsofttech.com");
+
+
+
+/* Define Upload Paths */
+
+define('USER_UPLOAD_PATH', 'uploads/users/');
+
+ 
+
+/* Database Constants */
+
+define('USER', 'users');
+defined('SEARCH_LIMIT')      OR define('SEARCH_LIMIT', 15);
+
+/*payment constants*/
+
+defined('STRIPE_SECRET_KEY')      OR define('STRIPE_SECRET_KEY', "sk_test_XFa2b9gYE8kXKbkRFeLx92Ac");
+defined('STRIPE_PUBLISHABLE_KEY')      OR define('STRIPE_PUBLISHABLE_KEY', "pk_test_YYLFBKOY6mNhRKw1CCWMKSQe");
+
+
+defined('PAYPAL_URL')      OR define('PAYPAL_URL', "https://www.sandbox.paypal.com/cgi-bin/webscr");
+
+defined('BUSINESS_EMAIL')      OR define('BUSINESS_EMAIL', "pushpendrajha88@gmail.com");
+
+defined('RETURN_URL')      OR define('RETURN_URL', "http://webdesky.com/reseller/Web/reponsePaypalPayment");
+
+defined('CANCEL_URL')      OR define('CANCEL_URL', "http://webdesky.com/reseller/Web/cancelPaypalPayment");
+
+defined('SMTP_HOST')      OR define('SMTP_HOST', "cp-in-4.webhostbox.net");
+defined('SMTP_PORT')      OR define('SMTP_PORT', 465);
+defined('SMTP_USER')      OR define('SMTP_USER', 'akash@espsofttech.com');
+defined('SMTP_PASS')      OR define('SMTP_PASS', 'esp123#');
+defined('PUSH_URL')       OR define('PUSH_URL', 'https://gcm-http.googleapis.com/gcm/send');
+defined('PUSH_API_KEY')   OR define('PUSH_API_KEY', 'AIzaSyBoDFjyfCA1sFo8pQBGnMV_dUNw1faGzL8');

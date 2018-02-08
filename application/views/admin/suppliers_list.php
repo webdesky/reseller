@@ -33,7 +33,7 @@
                                 </thead>
                                 <tbody>
                                    <?php 
-                                   $modaldata="";
+                                   $suppliers_data="";
                                     
             
                                    if(!empty($suppliers_data))
